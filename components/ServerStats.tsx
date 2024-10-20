@@ -21,7 +21,7 @@ const ServerStats: FC<Props> = ({
 
 	if (temperature >= 50) {
 		tempretureColor = "red.400";
-	} else if (temperature >= 40) {
+	} else if (temperature >= 35) {
 		tempretureColor = "yellow.400";
 	} else {
 		tempretureColor = "green.400";
