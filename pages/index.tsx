@@ -64,11 +64,17 @@ const Home: FC = () => {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Itta's Portfolio Site" />
         </Head>
-        <Box display="flex" alignItems="center" as="header" mx={11} py={9}>
+        <Box
+          display="flex"
+          alignItems="center"
+          as="header"
+          mx={11}
+          py={{ sm: 9, base: 3 }}
+        >
           <Logo mx="auto" cursor="pointer" />
         </Box>
-        <Box as="main" mt={9}>
-          <ContentGroup title="About">
+        <Box as="main">
+          <ContentGroup title="About" mt={{ md: 8, base: 2 }}>
             <Stack
               justifyContent="space-between"
               flexDir={{ md: "row", base: "column-reverse" }}

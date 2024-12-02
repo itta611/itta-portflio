@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react";
-import { chakra, ChakraProps } from "@chakra-ui/react";
+import { AspectRatio, chakra, ChakraProps } from "@chakra-ui/react";
 import lottie, { AnimationItem } from "lottie-web";
 import LogoWithoutHammer from "./LogoWithoutHammer";
 import kawaiiLogoHammer from "./kawaii-logo-hammer.json";
@@ -46,15 +46,11 @@ const Logo: FC<ChakraProps> = (props) => {
 
   return (
     <chakra.div position="relative" onClick={handleClick} {...props}>
-      <chakra.div ref={shadowContainerRef} height={220} />
-      <LogoWithoutHammer position="absolute" width="full" top={0} left={0} />
-      <chakra.div
-        position="absolute"
-        top={0}
-        left={0}
-        height={220}
-        ref={containerRef}
-      />
+      <chakra.div ref={shadowContainerRef} width="full" />
+      <AspectRatio ratio={562.5 / 220} width="full" position="absolute" top={0}>
+        <LogoWithoutHammer />
+      </AspectRatio>
+      <chakra.div position="absolute" top={0} left={0} ref={containerRef} />
     </chakra.div>
   );
 };
