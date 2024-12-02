@@ -1,9 +1,9 @@
-import { FC, useEffect, useRef } from 'react';
-import { chakra, ChakraProps } from '@chakra-ui/react';
-import lottie, { AnimationItem } from 'lottie-web';
-import LogoWithoutHammer from './LogoWithoutHammer';
-import kawaiiLogoHammer from './kawaii-logo-hammer.json';
-import kawaiiLogoHammerShadow from './kawaii-logo-hammer-shadow.json';
+import { FC, useEffect, useRef } from "react";
+import { chakra, ChakraProps } from "@chakra-ui/react";
+import lottie, { AnimationItem } from "lottie-web";
+import LogoWithoutHammer from "./LogoWithoutHammer";
+import kawaiiLogoHammer from "./kawaii-logo-hammer.json";
+import kawaiiLogoHammerShadow from "./kawaii-logo-hammer-shadow.json";
 
 const Logo: FC<ChakraProps> = (props) => {
   const player = useRef<AnimationItem | null>(null);
@@ -16,7 +16,7 @@ const Logo: FC<ChakraProps> = (props) => {
 
     player.current = lottie.loadAnimation({
       container: containerRef.current,
-      renderer: 'svg',
+      renderer: "svg",
       autoplay: true,
       loop: false,
       animationData: kawaiiLogoHammer,
@@ -24,11 +24,11 @@ const Logo: FC<ChakraProps> = (props) => {
 
     shadowPlayer.current = lottie.loadAnimation({
       container: shadowContainerRef.current,
-      renderer: 'svg',
+      renderer: "svg",
       autoplay: true,
       loop: false,
       animationData: kawaiiLogoHammerShadow,
-      path: '/lottie/kawaii-logo-hammer-shadow.json',
+      path: "/lottie/kawaii-logo-hammer-shadow.json",
     });
 
     return () => {
@@ -46,13 +46,12 @@ const Logo: FC<ChakraProps> = (props) => {
 
   return (
     <chakra.div position="relative" onClick={handleClick} {...props}>
-      <chakra.div ref={shadowContainerRef} width={562.5} height={220} />
-      <LogoWithoutHammer position="absolute" top={0} left={0} />
+      <chakra.div ref={shadowContainerRef} height={220} />
+      <LogoWithoutHammer position="absolute" width="full" top={0} left={0} />
       <chakra.div
         position="absolute"
         top={0}
         left={0}
-        width={562.5}
         height={220}
         ref={containerRef}
       />
