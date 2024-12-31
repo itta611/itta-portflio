@@ -8,6 +8,8 @@ import {
   Stack,
   HStack,
   Link as ChakraLink,
+  Grid,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import ContentGroup from "components/ContentGroup";
 import Head from "next/head";
@@ -20,7 +22,8 @@ import {
   IconBrandX,
   IconBuilding,
   IconCake,
-  IconCode,
+  IconClipboard,
+  IconExternalLink,
   IconHammer,
   IconHeartCode,
   IconMapPin,
@@ -55,6 +58,10 @@ const Home: FC = () => {
       clearInterval(timerId);
     };
   }, []);
+
+  const handleDiscordCopy = () => {
+    navigator.clipboard.writeText("itta.dev");
+  };
 
   return (
     <Box bg="gray.800" color="white" minH="100vh">
@@ -206,24 +213,42 @@ const Home: FC = () => {
             </HStack>
           </ContentGroup>
           <ContentGroup title="Links">
-            <VStack>
-              <Link href="https://github.com/itta611">
-                <Button leftIcon={<IconBrandGithub />}>GitHub: @itta611</Button>
-              </Link>
-              <Link href="https://twitter.com/IttaFunahashi">
-                <Button leftIcon={<IconBrandX />}>
-                  Twitter(X): @IttaFunahashi
+            <SimpleGrid gridTemplateColumns="2fr 1fr" gap={2} maxWidth={400}>
+              <HStack>
+                <IconBrandGithub />
+                <Text>GitHub</Text>
+              </HStack>
+              <a
+                href="https://github.com/itta611"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button rightIcon={<IconExternalLink />}>@itta611</Button>
+              </a>
+              <HStack>
+                <IconBrandX />
+                <Text>Twitter(X)</Text>
+              </HStack>
+              <a
+                href="https://twitter.com/IttaFunahashi"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button rightIcon={<IconExternalLink />}>@IttaFunahashi</Button>
+              </a>
+              <HStack>
+                <IconBrandDiscordFilled />
+                <Text>Discord</Text>
+              </HStack>
+              <Box>
+                <Button
+                  onClick={handleDiscordCopy}
+                  rightIcon={<IconClipboard />}
+                >
+                  @itta.dev
                 </Button>
-              </Link>
-              <Link href="https://discord.gg/PRC7Wsy2">
-                <Button leftIcon={<IconBrandDiscordFilled />}>
-                  Discord: @itta.dev
-                </Button>
-              </Link>
-              <Link href="https://github.com/itta611/itta.dev">
-                <Button leftIcon={<IconCode />}>Source Code</Button>
-              </Link>
-            </VStack>
+              </Box>
+            </SimpleGrid>
           </ContentGroup>
         </Box>
       </Container>
