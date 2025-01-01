@@ -168,18 +168,20 @@ const Home: FC = () => {
           </ContentGroup>
           <ContentGroup title="What I am doing">
             <Text>
-              UIについて考えるのが好きです。
-              <br />
-              たとえば、僕が中学の時に作った、{" "}
+              広義のユーザーインターフェース(UI)をテーマにプロダクトを作っています。
+            </Text>
+            <Text>
+              今では、UIといえば暗黙的にGUIのことを指すこととなりますが、いわゆる「広義のUI」を考えることが
+              私が少し前に作った{" "}
               <ChakraLink href="https://chokokucad.itta.dev" target="_blank">
                 Chokoku CAD
               </ChakraLink>{" "}
-              という作品があります。一般的なモデリングソフトは非常に多くの機能を持っているので、それに伴いUIも複雑化します。
-              そこで、多くの機能を一つのシンプルな機能（削ること）に落とし込むことで、低い学習コストと複雑な操作を同時に可能にするというアイデアです。
+              という作品があります。既存の3Dモデリングソフトは非常に多くの機能を持っていますが、これらを単一の機能
+              (=削ること) に集約することで使いやすくしたものです。
             </Text>
             <Text>
-              今も、同じコンセプトで LLM を使って複雑な GUI
-              を自然言語ベースのUIに置き換えるようなアプリケーションを作っています...
+              現在は、LLMによる自然言語ベースのUIを搭載した、アプリケーションを作っています...{" "}
+              <ChakraLink href="#3">↓</ChakraLink>
             </Text>
           </ContentGroup>
           <ContentGroup title="Certificates / Awards">
@@ -223,7 +225,9 @@ const Home: FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Button rightIcon={<IconExternalLink />}>@itta611</Button>
+                <Button rightIcon={<IconExternalLink size={20} />}>
+                  @itta611
+                </Button>
               </a>
               <HStack>
                 <IconBrandX />
@@ -234,7 +238,9 @@ const Home: FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Button rightIcon={<IconExternalLink />}>@IttaFunahashi</Button>
+                <Button rightIcon={<IconExternalLink size={20} />}>
+                  @IttaFunahashi
+                </Button>
               </a>
               <HStack>
                 <IconBrandDiscordFilled />
@@ -243,7 +249,7 @@ const Home: FC = () => {
               <Box>
                 <Button
                   onClick={handleDiscordCopy}
-                  rightIcon={<IconClipboard />}
+                  rightIcon={<IconClipboard size={20} />}
                 >
                   @itta.dev
                 </Button>
