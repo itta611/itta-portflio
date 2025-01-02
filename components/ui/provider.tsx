@@ -41,10 +41,8 @@ const system = createSystem(defaultConfig, {
       color: "teal.300!",
       textDecoration: "underline",
     },
-    p: {
-      color: "teal.300!",
-      paddingTop: "2px!",
-      paddingBottom: 2,
+    "* > p": {
+      py: 1,
     },
   },
 });

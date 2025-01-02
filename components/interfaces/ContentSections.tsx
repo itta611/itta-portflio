@@ -56,7 +56,7 @@ const ContentSections: FC = () => {
         <HStack flexWrap="wrap" alignItems="normal" gap={4}>
           <ProjectCard
             title="???"
-            description="開発中..."
+            description="開発中... XでときどきWIPを上げるかも?"
             imageURL="/img/gen5-thumbnail.png"
             link="#"
           />
