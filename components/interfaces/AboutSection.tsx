@@ -22,17 +22,17 @@ const AboutSection: FC = () => {
         <Box w={{ base: "full", md: "auto" }}>
           <Text fontWeight="bold" mb={6}>
             Itta Funahashi{" "}
-            <Text textColor="gray.400" as="span">
+            <Text color="gray.400" as="span">
               (@itta611)
             </Text>
           </Text>
-          <VStack spacing={2} textColor="teal.200" alignItems="start">
+          <VStack spaceY={2} color="teal.200" alignItems="start">
             <HStack>
               <IconCake size={18} />
               <Text
                 as="span"
                 ml={2}
-                textColor="white"
+                color="white"
                 fontSize="sm"
                 fontWeight="semibold"
               >
@@ -44,7 +44,7 @@ const AboutSection: FC = () => {
               <Text
                 as="span"
                 ml={2}
-                textColor="white"
+                color="white"
                 fontSize="sm"
                 fontWeight="semibold"
               >
@@ -56,7 +56,7 @@ const AboutSection: FC = () => {
               <Text
                 as="span"
                 ml={2}
-                textColor="white"
+                color="white"
                 fontSize="sm"
                 fontWeight="semibold"
               >
@@ -68,7 +68,7 @@ const AboutSection: FC = () => {
               <Text
                 as="span"
                 ml={2}
-                textColor="white"
+                color="white"
                 fontSize="sm"
                 fontWeight="semibold"
               >
@@ -80,7 +80,7 @@ const AboutSection: FC = () => {
               <Text
                 as="span"
                 ml={2}
-                textColor="white"
+                color="white"
                 fontSize="sm"
                 fontWeight="semibold"
               >

@@ -1,4 +1,6 @@
-import { Box, Container, Text, HStack } from "@chakra-ui/react";
+"use client";
+
+import { Text, HStack } from "@chakra-ui/react";
 import ServerStats from "components/interfaces/ServerStats";
 import ContentGroup from "components/ui/ContentGroup";
 import { FC, useEffect, useState } from "react";
@@ -35,7 +37,7 @@ const ServerStatsSection: FC = () => {
       <Text>
         おうちのラズパイクラスタサーバーの温度です。（リアルタイム更新）
       </Text>
-      <HStack spacing={5}>
+      <HStack spaceX={5}>
         {statsList &&
           hosts.map((hostname) => (
             <ServerStats

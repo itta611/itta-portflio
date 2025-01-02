@@ -1,4 +1,6 @@
-import { Box, Button, Text, HStack, SimpleGrid } from "@chakra-ui/react";
+"use client";
+
+import { Box, Text, HStack, SimpleGrid } from "@chakra-ui/react";
 import {
   IconBrandDiscordFilled,
   IconBrandGithub,
@@ -6,6 +8,7 @@ import {
   IconClipboard,
   IconExternalLink,
 } from "@tabler/icons-react";
+import { Button } from "components/ui/button";
 import ContentGroup from "components/ui/ContentGroup";
 import { FC } from "react";
 
@@ -22,7 +25,10 @@ const LinksSection: FC = () => {
           <Text>GitHub</Text>
         </HStack>
         <a href="https://github.com/itta611" target="_blank" rel="noreferrer">
-          <Button rightIcon={<IconExternalLink size={20} />}>@itta611</Button>
+          <Button>
+            <IconExternalLink size={20} />
+            @itta611
+          </Button>
         </a>
         <HStack>
           <IconBrandX />
@@ -33,7 +39,8 @@ const LinksSection: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Button rightIcon={<IconExternalLink size={20} />}>
+          <Button>
+            <IconExternalLink size={20} />
             @IttaFunahashi
           </Button>
         </a>
@@ -42,10 +49,8 @@ const LinksSection: FC = () => {
           <Text>Discord</Text>
         </HStack>
         <Box>
-          <Button
-            onClick={handleDiscordCopy}
-            rightIcon={<IconClipboard size={20} />}
-          >
+          <Button onClick={handleDiscordCopy}>
+            <IconClipboard size={20} />
             @itta.dev
           </Button>
         </Box>

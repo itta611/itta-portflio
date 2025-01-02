@@ -1,14 +1,14 @@
-import { Box, ChakraProps, Heading } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { Box, Heading, HTMLChakraProps } from "@chakra-ui/react";
+import { FC, ReactNode } from "react";
 
-export interface ContentGroupProps extends ChakraProps {
+export interface ContentGroupProps extends HTMLChakraProps<"div"> {
   title: string;
   children: ReactNode;
 }
 
-const ContentGroup: FC<ContentGroupProps> = ({ title, children, ...chakraProps }) => {
+const ContentGroup: FC<ContentGroupProps> = ({ title, children, ...props }) => {
   return (
-    <Box as="article" position="relative" mt={10} {...chakraProps}>
+    <Box as="article" position="relative" mt={10} {...props}>
       <Heading
         as="h2"
         fontWeight="extrabold"
@@ -18,8 +18,8 @@ const ContentGroup: FC<ContentGroupProps> = ({ title, children, ...chakraProps }
         position="relative"
         _before={{
           content: '""',
-          background: 'gray.700',
-          position: 'absolute',
+          background: "gray.700",
+          position: "absolute",
           borderRadius: 3,
           height: 4,
           left: -3,

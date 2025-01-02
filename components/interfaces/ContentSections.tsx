@@ -1,4 +1,5 @@
-import { Text, UnorderedList, Link as ChakraLink } from "@chakra-ui/react";
+import { Text, Link as ChakraLink, Card, List } from "@chakra-ui/react";
+import { Button } from "components/ui/button";
 import ContentGroup from "components/ui/ContentGroup";
 import ListItemWrap from "components/ui/ListItemWrap";
 import { FC } from "react";
@@ -33,7 +34,7 @@ const ContentSections: FC = () => {
         </Text>
       </ContentGroup>
       <ContentGroup title="Certificates / Awards">
-        <UnorderedList>
+        <List.Root>
           <ListItemWrap>基本情報技術者試験 (FE)</ListItemWrap>
           <ListItemWrap>英検２級</ListItemWrap>
           <ListItemWrap>
@@ -42,7 +43,30 @@ const ContentSections: FC = () => {
           <ListItemWrap>
             U-22 プログラミング・コンテスト 2021 経済産業大臣賞
           </ListItemWrap>
-        </UnorderedList>
+        </List.Root>
+      </ContentGroup>
+      <ContentGroup title="Works">
+        <Card.Root maxW="sm" overflow="hidden">
+          <Card.Body gap="2">
+            <Card.Title>Living room Sofa</Card.Title>
+            <Card.Description>
+              This sofa is perfect for modern tropical spaces, baroque inspired
+              spaces.
+            </Card.Description>
+            <Text
+              textStyle="2xl"
+              fontWeight="medium"
+              letterSpacing="tight"
+              mt="2"
+            >
+              $450
+            </Text>
+          </Card.Body>
+          <Card.Footer gap="2">
+            <Button variant="solid">Buy now</Button>
+            <Button variant="ghost">Add to cart</Button>
+          </Card.Footer>
+        </Card.Root>
       </ContentGroup>
     </>
   );

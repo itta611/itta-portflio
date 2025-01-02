@@ -1,11 +1,13 @@
+"use client";
+
 import { FC, useEffect, useRef } from "react";
-import { AspectRatio, chakra, ChakraProps } from "@chakra-ui/react";
+import { AspectRatio, Box, BoxProps, chakra } from "@chakra-ui/react";
 import lottie, { AnimationItem } from "lottie-web";
 import LogoWithoutHammer from "./LogoWithoutHammer";
 import kawaiiLogoHammer from "./kawaii-logo-hammer.json";
 import kawaiiLogoHammerShadow from "./kawaii-logo-hammer-shadow.json";
 
-const Logo: FC<ChakraProps> = (props) => {
+const Logo: FC<BoxProps> = (props) => {
   const player = useRef<AnimationItem | null>(null);
   const shadowPlayer = useRef<AnimationItem | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,13 +47,13 @@ const Logo: FC<ChakraProps> = (props) => {
   };
 
   return (
-    <chakra.div position="relative" onClick={handleClick} {...props}>
-      <chakra.div ref={shadowContainerRef} width="full" />
+    <Box position="relative" onClick={handleClick} {...props}>
+      <Box ref={shadowContainerRef} width="full" />
       <AspectRatio ratio={562.5 / 220} width="full" position="absolute" top={0}>
         <LogoWithoutHammer />
       </AspectRatio>
       <chakra.div position="absolute" top={0} left={0} ref={containerRef} />
-    </chakra.div>
+    </Box>
   );
 };
 

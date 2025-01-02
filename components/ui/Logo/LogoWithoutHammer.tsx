@@ -1,15 +1,8 @@
-import { FC } from 'react';
-import { chakra, ChakraProps } from '@chakra-ui/react';
+import { FC } from "react";
 
-const LogoWithoutHammer: FC<ChakraProps> = (props) => {
+const LogoWithoutHammer: FC = () => {
   return (
-    <chakra.svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="562.5"
-      height="220"
-      viewBox="0 0 450 176"
-      {...props}
-    >
+    <svg width="562.5" height="220" viewBox="0 0 450 176">
       <desc>itta.dev</desc>
       <defs>
         <linearGradient
@@ -176,7 +169,7 @@ const LogoWithoutHammer: FC<ChakraProps> = (props) => {
           />
         </g>
       </g>
-    </chakra.svg>
+    </svg>
   );
 };
 
