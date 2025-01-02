@@ -20,7 +20,7 @@ const AboutSection: FC = () => {
         alignItems="center"
       >
         <Box w={{ base: "full", md: "auto" }}>
-          <Text fontWeight="bold" mb={6}>
+          <Text fontWeight="bold" mt={2} mb={5}>
             Itta Funahashi{" "}
             <Text color="gray.400" as="span">
               (@itta611)

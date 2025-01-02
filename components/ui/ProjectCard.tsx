@@ -20,6 +20,10 @@ const ProjectCard: FC<Props> = ({ title, description, imageURL, link }) => {
         borderWidth={1}
         borderColor="whiteAlpha.50"
         borderRadius="2xl"
+        transition="transform"
+        _hover={{
+          transform: "scale(1.02)",
+        }}
       >
         <Card.Body gap="2" p={4}>
           <Image asChild alt={`${title} thumbnail`} borderRadius="xl">

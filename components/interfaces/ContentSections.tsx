@@ -29,10 +29,7 @@ const ContentSections: FC = () => {
           これを解決する一般的な方法は、「機能を絞る」ことでしょう。これなら直感的で初心者でも使いやすくなりますが、この方法では自由度の高さにいずれ限界が生まれます。
         </Text>
         <Text>
-          私が作った{" "}
-          <ChakraLink href="https://chokokucad.itta.dev" target="_blank">
-            Chokoku CAD
-          </ChakraLink>{" "}
+          私が作った <ChakraLink href="#works">Chokoku CAD</ChakraLink>{" "}
           がこれを機能レベルで行うものでした。
         </Text>
         <Text>
@@ -40,7 +37,7 @@ const ContentSections: FC = () => {
         </Text>
         <Text>
           現在は、LLMによる自然言語ベースのUIとGUIの融合による「究極のUIの形」を目指したアプリケーションを開発しています...{" "}
-          <ChakraLink href="#3">↓</ChakraLink>
+          <ChakraLink href="#works">↓</ChakraLink>
         </Text>
       </ContentGroup>
       <ContentGroup title="Certificates / Awards">
@@ -55,7 +52,7 @@ const ContentSections: FC = () => {
           </ListItemWrap>
         </List.Root>
       </ContentGroup>
-      <ContentGroup title="Works">
+      <ContentGroup title="Works" id="works">
         <HStack flexWrap="wrap" alignItems="normal" gap={4}>
           <ProjectCard
             title="???"
@@ -65,7 +62,7 @@ const ContentSections: FC = () => {
           />
           <ProjectCard
             title="itta.dev"
-            description="私のすべて"
+            description="かっこかわいいを目指しながら更新中"
             imageURL="/img/itta-dev-thumbnail.png"
             link="https://chokokucad.itta.dev"
           />
