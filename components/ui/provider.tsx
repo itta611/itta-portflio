@@ -32,7 +32,6 @@ const system = createSystem(defaultConfig, {
   globalCss: {
     body: {
       bg: "gray.800",
-      fontSize: "lg",
     },
     "*::selection": {
       bg: "teal.800",
@@ -42,7 +41,7 @@ const system = createSystem(defaultConfig, {
       textDecoration: "underline",
     },
     "* > p": {
-      py: 1,
+      my: 2,
     },
   },
 });
