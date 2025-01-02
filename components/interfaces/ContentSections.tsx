@@ -1,8 +1,18 @@
-import { Text, Link as ChakraLink, Card, List } from "@chakra-ui/react";
+import {
+  Text,
+  Link as ChakraLink,
+  Card,
+  List,
+  Image,
+  HStack,
+} from "@chakra-ui/react";
 import { Button } from "components/ui/button";
 import ContentGroup from "components/ui/ContentGroup";
 import ListItemWrap from "components/ui/ListItemWrap";
+import NextImage from "next/image";
+import Link from "next/link";
 import { FC } from "react";
+import ProjectCard from "../ui/ProjectCard";
 
 const ContentSections: FC = () => {
   return (
@@ -12,18 +22,18 @@ const ContentSections: FC = () => {
           直感性の高さと自由度の高さを同時に満たすようなユーザーインターフェース(UI)のあり方をテーマにプロダクト開発に取り組んでいます。
         </Text>
         <Text>
-          例えばエディタ系のようなソフトウェアでは、非常に多くの機能を持つので、それに伴いUIも複雑になります。
+          私たちはUI自体の良し悪しにかかわらず、ソフトウェアを「使いづらい」「学習コストが高い」と感じることがあります。
+          特にエディタ系のようなソフトウェアでは、非常に多くの機能を持つ分これが顕著になります。
         </Text>
         <Text>
           これを解決する一般的な方法は、「機能を絞る」ことでしょう。これなら直感的で初心者でも使いやすくなりますが、この方法では自由度の高さにいずれ限界が生まれます。
         </Text>
         <Text>
-          私が過去に作ったアプリケーションに{" "}
+          私が作った{" "}
           <ChakraLink href="https://chokokucad.itta.dev" target="_blank">
             Chokoku CAD
           </ChakraLink>{" "}
-          というものがあります。既存の3Dモデリングソフトは非常に多くの機能を持っていますが、Chokoku
-          CADで必要なのは「削る」操作だけです。
+          がこれを機能レベルで行うものでした。
         </Text>
         <Text>
           機能をうまく一般化することさえできれば、そこそこの自由度を維持しながら使いやすさを実現することができます。
@@ -46,27 +56,26 @@ const ContentSections: FC = () => {
         </List.Root>
       </ContentGroup>
       <ContentGroup title="Works">
-        <Card.Root maxW="sm" overflow="hidden">
-          <Card.Body gap="2">
-            <Card.Title>Living room Sofa</Card.Title>
-            <Card.Description>
-              This sofa is perfect for modern tropical spaces, baroque inspired
-              spaces.
-            </Card.Description>
-            <Text
-              textStyle="2xl"
-              fontWeight="medium"
-              letterSpacing="tight"
-              mt="2"
-            >
-              $450
-            </Text>
-          </Card.Body>
-          <Card.Footer gap="2">
-            <Button variant="solid">Buy now</Button>
-            <Button variant="ghost">Add to cart</Button>
-          </Card.Footer>
-        </Card.Root>
+        <HStack flexWrap="wrap" alignItems="normal" gap={4}>
+          <ProjectCard
+            title="???"
+            description="開発中..."
+            imageURL="/img/gen5-thumbnail.png"
+            link="#"
+          />
+          <ProjectCard
+            title="itta.dev"
+            description="私のすべて"
+            imageURL="/img/itta-dev-thumbnail.png"
+            link="https://chokokucad.itta.dev"
+          />
+          <ProjectCard
+            title="Chokoku CAD"
+            description="彫刻のように「削る」操作で造形する3Dモデリングソフト"
+            imageURL="/img/chokokucad-thumbnail.png"
+            link="#"
+          />
+        </HStack>
       </ContentGroup>
     </>
   );
