@@ -24,7 +24,7 @@ const ContentGroup: FC<ContentGroupProps> = ({ title, children, ...props }) => {
           height: 4,
           left: -3,
           right: -3,
-          bottom: 0,
+          bottom: -1,
         }}
       >
         <Box position="relative" display="inline">

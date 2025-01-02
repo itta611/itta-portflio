@@ -22,36 +22,36 @@ const LinksSection: FC = () => {
       <SimpleGrid gridTemplateColumns="2fr 1fr" gap={2} maxWidth={400}>
         <HStack>
           <IconBrandGithub />
-          <Text>GitHub</Text>
+          GitHub
         </HStack>
         <a href="https://github.com/itta611" target="_blank" rel="noreferrer">
-          <Button>
-            <IconExternalLink size={20} />
+          <Button variant="subtle">
             @itta611
+            <IconExternalLink size={20} />
           </Button>
         </a>
         <HStack>
           <IconBrandX />
-          <Text>Twitter(X)</Text>
+          Twitter(X)
         </HStack>
         <a
           href="https://twitter.com/IttaFunahashi"
           target="_blank"
           rel="noreferrer"
         >
-          <Button>
-            <IconExternalLink size={20} />
+          <Button variant="subtle">
             @IttaFunahashi
+            <IconExternalLink size={20} />
           </Button>
         </a>
         <HStack>
           <IconBrandDiscordFilled />
-          <Text>Discord</Text>
+          Discord
         </HStack>
         <Box>
-          <Button onClick={handleDiscordCopy}>
-            <IconClipboard size={20} />
+          <Button onClick={handleDiscordCopy} variant="subtle">
             @itta.dev
+            <IconClipboard size={20} />
           </Button>
         </Box>
       </SimpleGrid>

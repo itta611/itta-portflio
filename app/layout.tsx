@@ -1,39 +1,7 @@
-// import {
-//   ChakraProvider,
-//   createSystem,
-//   defaultConfig,
-//   defaultSystem,
-// } from "@chakra-ui/react";
-import { Provider } from "../components/ui/provider";
+"use client";
 
-// const system = createSystem(defaultConfig, {
-// components: {
-//   Text: {
-//     baseStyle: {
-//       my: { value: 2 },
-//     },
-//   },
-//   Link: {
-//     baseStyle: {
-//       color: { value: "teal.200" },
-//       textDecoration: { value: "underline" },
-//     },
-//   },
-// },
-// config: {
-//   initialColorMode: "dark",
-//   useSystemColorMode: false,
-// },
-// styles: {
-//   global: () => ({
-//     body: {
-//       bg: "gray.800",
-//       color: "white",
-//       fontSize: "lg",
-//     },
-//   }),
-// },
-// });
+import { ColorModeProvider } from "@/components/ui/color-mode";
+import { Provider } from "../components/ui/provider";
 
 export default function RootLayout({
   children,
@@ -43,7 +11,9 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body>
-        <Provider>{children}</Provider>
+        <Provider forcedTheme="dark">
+          <ColorModeProvider>{children}</ColorModeProvider>
+        </Provider>
       </body>
     </html>
   );

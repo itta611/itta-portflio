@@ -14,12 +14,15 @@ const ServerStatsSection: FC = () => {
   hosts.sort();
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") return;
+    const API_ROUTE =
+      process.env.NODE_ENV === "development"
+        ? "https://itta.dev/api/getStats"
+        : "/api/getStats";
 
     let timerId: NodeJS.Timeout;
 
     const fetchStats = async () => {
-      const res = await fetch("/api/getStats");
+      const res = await fetch(API_ROUTE);
       const data = await res.json();
       setStats(data);
       timerId = setTimeout(fetchStats, 5000);
