@@ -1,16 +1,6 @@
-import {
-  Text,
-  Link as ChakraLink,
-  Card,
-  List,
-  Image,
-  HStack,
-} from "@chakra-ui/react";
-import { Button } from "components/ui/button";
+import { Text, Link as ChakraLink, List, HStack } from "@chakra-ui/react";
 import ContentGroup from "components/ui/ContentGroup";
 import ListItemWrap from "components/ui/ListItemWrap";
-import NextImage from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 import ProjectCard from "../ui/ProjectCard";
 
@@ -23,11 +13,11 @@ const ContentSections: FC = () => {
         </Text>
         <Text>
           私たちはUI自体の良し悪しにかかわらず、ソフトウェアを「使いづらい」「学習コストが高い」と感じることがあります。
-          特にエディタ系のようなソフトウェアでは、機能の量が多い分これが顕著になります。
+          特にエディタ系のようなソフトウェアでは、機能の量が多い分画面のどこに何があるのか分かりづらくなり、これが顕著になります。
         </Text>
         <Text>
           これを解決する最もシンプルな方法は「機能を絞る」ことですが、自由度の高さにいずれ限界が生まれます。
-          私は、アプリケーションを構成する要素をうまく一般化して一つのものに集約すれば、そこそこの自由度を維持しながら使いやすさを実現することができると考えます。
+          私は、アプリケーションを構成する要素をうまく一般化して一つのものに集約すれば、そこそこの自由度を維持しながら使いやすさを実現することができると考えています。
         </Text>
         <Text>
           私が作った <ChakraLink href="#works">Chokoku CAD</ChakraLink>{" "}

@@ -21,10 +21,18 @@ const system = createSystem(defaultConfig, {
         },
       },
     },
-    recipes: {
-      a: {
-        base: {
-          color: "teal.400",
+    semanticTokens: {
+      colors: {
+        button: {
+          // solid: { value: "{colors.gray.500}" },
+          // contrast: { value: "{colors.gray.100}" },
+          // fg: { value: "{colors.gray.700}" },
+          muted: { value: "{colors.gray.600}" },
+          subtle: {
+            value: "{colors.gray.700}",
+          },
+          // emphasized: { value: "{colors.gray.300}" },
+          // focusRing: { value: "{colors.gray.500}" },
         },
       },
     },
