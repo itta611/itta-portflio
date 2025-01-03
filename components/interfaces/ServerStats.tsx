@@ -41,7 +41,9 @@ const ServerStats: FC<Props> = ({
       <VStack p={2} spaceY={1} alignItems="start">
         <HStack alignItems="center" spaceX={2}>
           <IconCpu size={20} strokeWidth={1.5} />
-          <Text fontSize="sm">{cpuUsage}%</Text>
+          <Text fontSize="sm" my={0}>
+            {cpuUsage}%
+          </Text>
         </HStack>
         <HStack alignItems="center" spaceX={2}>
           <IconRuler3
@@ -49,7 +51,7 @@ const ServerStats: FC<Props> = ({
             strokeWidth={1.5}
             style={{ transform: "rotate(180deg)" }}
           />
-          <Text fontSize="sm">
+          <Text fontSize="sm" my={0}>
             {memoryUsage} / {totalMemory}GB
           </Text>
         </HStack>

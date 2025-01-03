@@ -40,7 +40,7 @@ const ServerStatsSection: FC = () => {
       <Text>
         おうちのラズパイクラスタサーバーの温度です。（リアルタイム更新）
       </Text>
-      <HStack spaceX={5}>
+      <HStack spaceX={5} spaceY={0}>
         {statsList &&
           hosts.map((hostname) => (
             <ServerStats
