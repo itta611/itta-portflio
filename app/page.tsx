@@ -6,6 +6,7 @@ import LinksSection from "@/components/interfaces/LinksSection";
 import ServerStatsSection from "@/components/interfaces/ServerStatsSection";
 import { FC } from "react";
 import { Metadata } from "next";
+import Footer from "@/components/interfaces/Footer";
 
 export const metadata: Metadata = {
   title: "Itta's Portfolio",
@@ -24,6 +25,7 @@ const Home: FC = () => {
           <LinksSection />
         </Box>
       </Container>
+      <Footer />
     </Box>
   );
 };
