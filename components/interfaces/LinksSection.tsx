@@ -10,11 +10,16 @@ import {
 } from "@tabler/icons-react";
 import { Button } from "components/ui/button";
 import ContentGroup from "components/ui/ContentGroup";
+import { toaster } from "@/components/ui/toaster";
 import { FC } from "react";
 
 const LinksSection: FC = () => {
   const handleDiscordCopy = () => {
     navigator.clipboard.writeText("itta.dev");
+    toaster.create({
+      title: "Discord ID をコピーしました",
+      description: "フレンドに追加してください",
+    });
   };
 
   return (
