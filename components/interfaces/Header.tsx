@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Logo from "components/ui/Logo";
-import { FC } from "react";
+import { FC, Suspense } from "react";
 
 const Header: FC = () => {
   return (
@@ -11,7 +11,9 @@ const Header: FC = () => {
       mx={11}
       py={{ sm: 9, base: 3 }}
     >
-      <Logo mx="auto" cursor="pointer" />
+      <Suspense fallback={<div>サスペンドしたらこれが表示される</div>}>
+        <Logo mx="auto" cursor="pointer" />
+      </Suspense>
     </Box>
   );
 };
