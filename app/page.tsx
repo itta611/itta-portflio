@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const Home: FC = () => {
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" mx={4}>
       <Container maxW={736} pb={15} px={0}>
         <Header />
         <Box as="main">
