@@ -1,6 +1,23 @@
-import { Box } from "@chakra-ui/react";
-import Logo from "components/ui/Logo";
-import { FC, Suspense } from "react";
+"use client";
+
+import { Box, Spinner } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+import { FC } from "react";
+
+const LogoWithLottie = dynamic(() => import("@/components/ui/Logo"), {
+  ssr: false,
+  loading: () => (
+    <Box
+      h="176px"
+      w="full"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Spinner size="xl" color="white" />
+    </Box>
+  ),
+});
 
 const Header: FC = () => {
   return (
@@ -11,9 +28,7 @@ const Header: FC = () => {
       mx={11}
       py={{ sm: 9, base: 3 }}
     >
-      <Suspense fallback={<div>サスペンドしたらこれが表示される</div>}>
-        <Logo mx="auto" cursor="pointer" />
-      </Suspense>
+      <LogoWithLottie mx="auto" cursor="pointer" />
     </Box>
   );
 };
