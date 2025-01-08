@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, VStack } from "@chakra-ui/react";
 import { IconCpu, IconRuler3 } from "@tabler/icons-react";
 import { FC } from "react";
 
@@ -31,29 +31,29 @@ const ServerStats: FC<Props> = ({
 
   return (
     <Box w={28} color="gray.400">
-      <VStack spaceY={-1} py={2}>
+      <VStack gap={-1} py={2}>
         <Box fontWeight="bold" fontSize="3xl" color={tempretureColor}>
           {temperature}
         </Box>
         <Box marginTop={0}>{hostname}</Box>
       </VStack>
-      <Box borderTop="1px" borderColor="gray.500" width="full" />
-      <VStack p={2} spaceY={1} alignItems="start">
-        <HStack alignItems="center" spaceX={2}>
+      <Box borderWidth={1} borderTopColor="gray.600" width="full" />
+      <VStack p={2} alignItems="start">
+        <HStack alignItems="center">
           <IconCpu size={20} strokeWidth={1.5} />
-          <Text fontSize="sm" my={0}>
+          <Box fontSize="sm" my={0}>
             {cpuUsage}%
-          </Text>
+          </Box>
         </HStack>
-        <HStack alignItems="center" spaceX={2}>
+        <HStack alignItems="center">
           <IconRuler3
             size={20}
             strokeWidth={1.5}
             style={{ transform: "rotate(180deg)" }}
           />
-          <Text fontSize="sm" my={0}>
+          <Box fontSize="sm" my={0}>
             {memoryUsage} / {totalMemory}GB
-          </Text>
+          </Box>
         </HStack>
       </VStack>
     </Box>

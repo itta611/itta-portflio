@@ -14,10 +14,7 @@ const ServerStatsSection: FC = () => {
   hosts.sort();
 
   useEffect(() => {
-    const API_ROUTE =
-      process.env.NODE_ENV === "development"
-        ? "https://itta.dev/api/getStats"
-        : "/api/getStats";
+    const API_ROUTE = "/api/getStats";
 
     let timerId: NodeJS.Timeout;
 
