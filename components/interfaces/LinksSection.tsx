@@ -27,7 +27,7 @@ const LinksSection: FC = () => {
       title="Links"
       backgroundImage='url("/img/discord-arrow.svg")'
       backgroundRepeat="no-repeat"
-      backgroundPositionY="bottom 14px"
+      backgroundPositionY="148px"
       backgroundPositionX="100px"
     >
       <SimpleGrid gridTemplateColumns="2fr 1fr" gap={2} maxWidth={400}>
